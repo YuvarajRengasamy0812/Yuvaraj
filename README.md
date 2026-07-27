@@ -1,31 +1,79 @@
-## Portfolio-Website
-Portfolio website build using HTML5, CSS3, JavaScript and jQuery.
+# Yuvaraj R Portfolio
 
-<a href="https://jigarsable.netlify.app/" target="_blank">**Visit Now** 🚀</a>
+Modern React + Tailwind CSS portfolio rebuilt from the older HTML/CSS/Bootstrap/JavaScript version.
 
+## Current Structure
 
-## 📌 Tech Stack
-[![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)](https://github.com/jigar-sable/Portfolio-Website/search?l=html)&nbsp;
-[![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)](https://github.com/jigar-sable/Portfolio-Website/search?l=css)&nbsp;
-[![JS](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)](https://github.com/jigar-sable/Portfolio-Website/search?l=javascript)
-<img alt="jQuery" src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white"/>
+```text
+src/
+  App.jsx
+  main.jsx
+  data/portfolio.js
+  hooks/
+    useDateTime.js
+    useDocumentTitle.js
+    useReveal.js
+    useTypewriter.js
+  components/
+    AppLink.jsx
+    Header.jsx
+    Footer.jsx
+    Layout.jsx
+    Hero.jsx
+    HeroParticles.jsx
+    TiltImage.jsx
+    PageHero.jsx
+    SectionHeading.jsx
+    StatsBand.jsx
+    SkillGrid.jsx
+    AiMarquee.jsx
+    ProjectCard.jsx
+    ExperienceTimeline.jsx
+    EducationCards.jsx
+    ContactPanel.jsx
+  pages/
+    Home.jsx
+    About.jsx
+    Skills.jsx
+    Projects.jsx
+    Gallery.jsx
+    Company.jsx
+    Travel.jsx
+    Contact.jsx
+    NotFound.jsx
+```
 
-### Extras : 
-Particle.js, Typed.js, Tilt.js, Scroll Reveal, Tawk.to, Font Awesome and JSON
+## Pages
 
-## 📌 Sneak Peek of Main Page 🙈 :
-![mockup720](https://user-images.githubusercontent.com/64949957/124947013-1f682080-e02d-11eb-977e-df3bbd4fa838.png)
-![ss](https://user-images.githubusercontent.com/64949957/159113640-d92665a8-f614-42b3-8456-66b97fc2e651.png)
+- `/` - Home with old-style hero, particles, typing text and tilt image
+- `/about` - About and profile details
+- `/education` - Current MBA and full old education details
+- `/skills` - Skills, levels and AI tools
+- `/projects` - Project cards
+- `/gallery` - Filterable image gallery
+- `/company` - Work experience timeline
+- `/travel` - Travel and personal journey page
+- `/contact` - Contact details and message form
 
+## Tech Stack
 
-<h2>📬 Contact</h2>
+- React with Vite
+- Tailwind CSS
+- Lucide React icons
+- Custom lightweight browser routing
+- Custom typewriter, reveal, particle and tilt animations
 
+## Run Locally
 
-If you want to contact me, you can reach me through below handles.
+```bash
+npm.cmd install
+npm.cmd run dev
+```
 
-&nbsp;&nbsp;<a href="https://www.linkedin.com/in/jigar-sable/"><img src="https://www.felberpr.com/wp-content/uploads/linkedin-logo.png" width="30"></img></a>
+Production build:
 
-© 2023 swetha
+```bash
+npm.cmd run build
+```
 
-
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+Local dev URL: http://127.0.0.1:5173
