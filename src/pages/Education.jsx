@@ -1,6 +1,7 @@
+import AnimatedPageHero from "../components/AnimatedPageHero";
 import EducationCards from "../components/EducationCards";
-import PageHero from "../components/PageHero";
 import SectionHeading from "../components/SectionHeading";
+import educationHero from "../../assets/images/education/hero/education-hero-banner.png";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useReveal } from "../hooks/useReveal";
 
@@ -10,10 +11,12 @@ export default function Education() {
 
   return (
     <>
-      <PageHero
+      <AnimatedPageHero
         eyebrow="Education"
         title="My education timeline in four simple stages."
         text="Small modern cards, one by one. Open each story to read the full article for that education phase."
+        image={educationHero}
+        variant="education"
       />
       <section className="section soft education-page-section">
         <div className="section-inner education-list-inner">

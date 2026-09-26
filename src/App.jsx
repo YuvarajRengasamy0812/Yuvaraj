@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Travel from "./pages/Travel";
+import TravelArticle from "./pages/TravelArticle";
 
 const routes = {
   "/": Home,
@@ -37,6 +38,11 @@ export default function App() {
     if (path.startsWith("/education/")) {
       const slug = path.replace("/education/", "");
       return () => <EducationArticle slug={slug} />;
+    }
+
+    if (path.startsWith("/travel/")) {
+      const slug = path.replace("/travel/", "");
+      return () => <TravelArticle slug={slug} />;
     }
 
     return routes[path] ?? NotFound;

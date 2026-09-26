@@ -11,7 +11,10 @@ export default function EducationArticle({ slug }) {
   const previous = education[index - 1];
   const next = education[index + 1];
   const supportImages = education.filter((entry) => entry.slug !== item.slug);
-  const collage = [item, ...supportImages].slice(0, 4);
+  const galleryImages = item.galleryImages ?? [item.image, ...supportImages.map((entry) => entry.image)].slice(0, 4);
+  const reflectionImage = item.galleryImages?.[1] ?? (supportImages[0] ?? item).image;
+    const reflectionImage1 = item.galleryImages?.[3] ?? (supportImages[0] ?? item).image;
+
 
   useDocumentTitle(`${item.shortTitle ?? item.title} | Education`);
   useReveal();
@@ -47,10 +50,10 @@ export default function EducationArticle({ slug }) {
               </div>
             </div>
 
-            <div className="edu-collage" aria-label="Education images">
-              {collage.map((entry, imageIndex) => (
-                <figure className={`edu-collage-item item-${imageIndex + 1}`} key={`${entry.slug}-${imageIndex}`}>
-                  <img src={entry.image} alt={entry.shortTitle ?? entry.title} />
+            <div className={`edu-collage${item.galleryImages ? " gallery-grid" : ""}`} aria-label="Education images">
+              {galleryImages.map((image, imageIndex) => (
+                <figure className={`edu-collage-item item-${imageIndex + 1}`} key={`${item.slug}-${imageIndex}`}>
+                  <img src={image} alt={`${item.shortTitle ?? item.title} ${imageIndex + 1}`} />
                 </figure>
               ))}
             </div>
@@ -70,7 +73,7 @@ export default function EducationArticle({ slug }) {
               </div>
             </div>
             <figure className="edu-feature-image">
-              <img src={item.image} alt={`${item.title} feature`} />
+              <img src={reflectionImage1} alt={`${item.title} feature`} />
             </figure>
           </section>
 
@@ -86,7 +89,7 @@ export default function EducationArticle({ slug }) {
                 <h3>How it shaped my learning style</h3>
                 <p>{item.fullArticle[item.fullArticle.length - 1]}</p>
                 <figure>
-                  <img src={(supportImages[0] ?? item).image} alt="Related education memory" />
+                  <img src={reflectionImage} alt="Related education memory" />
                 </figure>
               </div>
 

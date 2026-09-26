@@ -1,6 +1,7 @@
-import PageHero from "../components/PageHero";
+import AnimatedPageHero from "../components/AnimatedPageHero";
 import ProjectCard from "../components/ProjectCard";
 import SectionHeading from "../components/SectionHeading";
+import projectsHero from "../../assets/images/projects/hero/projects-hero-banner.png";
 import { projects } from "../data/portfolio";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useReveal } from "../hooks/useReveal";
@@ -11,10 +12,16 @@ export default function Projects() {
 
   return (
     <>
-      <PageHero eyebrow="Projects" title="Real project work with product context." text="Business social network, ecommerce and CRUD workflows from the earlier portfolio, upgraded into a modern project page." />
-      <section className="section white">
+      <AnimatedPageHero
+        eyebrow="Projects"
+        title="Production projects with real product context."
+        text="Fintech, event, CRM and marketplace products built with clean interfaces, secure workflows and responsive front-end delivery."
+        image={projectsHero}
+        variant="projects"
+      />
+      <section className="section white projects-showcase">
         <div className="section-inner">
-          <SectionHeading eyebrow="Selected projects" title="Built, shipped and maintained web applications." />
+          <SectionHeading eyebrow="Selected projects" title="Modern web platforms built for real users." />
           <div className="project-grid">{projects.map((project) => <ProjectCard key={project.title} project={project} />)}</div>
         </div>
       </section>

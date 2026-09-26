@@ -17,7 +17,9 @@ import {
   Users,
 } from "lucide-react";
 import AppLink from "../components/AppLink";
-import PageHero from "../components/PageHero";
+import AnimatedPageHero from "../components/AnimatedPageHero";
+import aboutHero from "../../assets/images/about/hero/about-hero-banner.png";
+import dubaiFintechAiVisual from "../../assets/images/about/dubai/dubai-fintech-ai-visual.png";
 import { images, profile, services, stats } from "../data/portfolio";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useReveal } from "../hooks/useReveal";
@@ -73,10 +75,14 @@ export default function About() {
 
   return (
     <>
-      <PageHero
+      <AnimatedPageHero
         eyebrow="About"
         title="About Yuvaraj Rengasamy"
         text="Full Stack Software Developer building fintech, CRM, SaaS and event-management products with React, Next.js, PHP and Laravel."
+        image={aboutHero}
+        portrait={images.profile}
+        variant="about"
+        snow
       />
 
       <section className="section white about-overview-section">
@@ -145,7 +151,7 @@ export default function About() {
         <div className="about-container">
           <h2 className="about-center-title" data-reveal>Why Dubai, fintech and AI matter in my current journey</h2>
           <div className="about-dubai-grid">
-            <figure data-reveal><img src={images.laptop} alt="Dubai fintech product work visual" /></figure>
+            <figure data-reveal><img src={dubaiFintechAiVisual} alt="Dubai fintech and AI analytics visual" /></figure>
             <div className="about-dubai-card" data-reveal>
               <b>Current Direction</b>
               <h3>Full-stack fintech work with stronger analytics thinking.</h3>
@@ -220,3 +226,4 @@ export default function About() {
 function Info({ icon: Icon, label, value }) {
   return <div className="info-box"><Icon size={18} /><span><b>{label}</b>{value}</span></div>;
 }
+

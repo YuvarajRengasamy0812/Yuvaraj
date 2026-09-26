@@ -1,6 +1,9 @@
-import PageHero from "../components/PageHero";
+import { ArrowRight, MapPin } from "lucide-react";
+import AnimatedPageHero from "../components/AnimatedPageHero";
+import AppLink from "../components/AppLink";
 import SectionHeading from "../components/SectionHeading";
-import { travel } from "../data/portfolio";
+import travelHero from "../../assets/images/travel/hero/travel-hero-banner.png";
+import { travelDestinations } from "../data/travel";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
 import { useReveal } from "../hooks/useReveal";
 
@@ -10,12 +13,46 @@ export default function Travel() {
 
   return (
     <>
-      <PageHero eyebrow="Travel" title="Places connected to work, roots and growth." text="A simple travel and life page that can grow with more photos later." />
-      <section className="section white">
+      <AnimatedPageHero
+        eyebrow="Travel"
+        title="Chennai first, then the cities that shaped the journey."
+        text="A personal travel journal across Tamil Nadu roots, Bengaluru work experience and Dubai career growth."
+        image={travelHero}
+        variant="travel"
+        snow
+      />
+
+      <section className="section white travel-showcase">
         <div className="section-inner">
-          <SectionHeading eyebrow="Travel journal" title="Cities and memories around the journey." />
-          <div className="travel-grid">
-            {travel.map((item) => <article key={item.place} data-reveal><img src={item.image} alt={item.place} /><div><p>Travel</p><h3>{item.place}</h3><span>{item.note}</span></div></article>)}
+          <SectionHeading
+            eyebrow="Travel cards"
+            title="Places connected to roots, work and growth."
+            text="Click View to open a dedicated modern article page for each city."
+          />
+
+          <div className="travel-card-grid">
+            {travelDestinations.map((destination) => (
+              <article className="travel-card" key={destination.slug} data-reveal>
+                <AppLink className="travel-card-button travel-card-link" to={`/travel/${destination.slug}`}>
+                  <span className="travel-card-media">
+                    <img src={destination.image} alt={`${destination.place}, ${destination.region}`} />
+                    <b>{destination.badge}</b>
+                  </span>
+                  <span className="travel-card-body">
+                    <small>
+                      <MapPin size={14} />
+                      {destination.region}
+                    </small>
+                    <strong>{destination.place}</strong>
+                    <span>{destination.summary}</span>
+                    <i>
+                      View article
+                      <ArrowRight size={16} />
+                    </i>
+                  </span>
+                </AppLink>
+              </article>
+            ))}
           </div>
         </div>
       </section>

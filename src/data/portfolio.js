@@ -4,18 +4,37 @@ export const images = {
   about: new URL("../../assets/images/home/about/yuvaraj-about.jpeg", import.meta.url).href,
   profile: new URL("../../assets/images/gallery/personal/yuvaraj-profile.jpeg", import.meta.url).href,
   professional: new URL("../../assets/images/about/overview/yuvaraj-professional.jpeg", import.meta.url).href,
-  laptop: new URL("../../assets/images/projects/cards/bridgex-platform.jpg", import.meta.url).href,
-  android: new URL("../../assets/images/projects/cards/trading-infrastructure.jpg", import.meta.url).href,
+  laptop: new URL("../../assets/images/projects/cards/bridgex-platform.png", import.meta.url).href,
+  android: new URL("../../assets/images/projects/cards/trading-infrastructure.png", import.meta.url).href,
+  profxExpo: new URL("../../assets/images/projects/cards/profxexpo.png", import.meta.url).href,
+  finxcart: new URL("../../assets/images/projects/cards/finxcard.png", import.meta.url).href,
   contact: new URL("../../assets/images/contact/panel/contact-visual.png", import.meta.url).href,
   contactAlt: new URL("../../assets/images/about/overview/ai-assisted-visual.png", import.meta.url).href,
+  bridgingAcademy: new URL("../../assets/images/projects/cards/bridging.png", import.meta.url).href,
   heroArt: new URL("../../assets/images/about/mission/ai-product-visual.png", import.meta.url).href,
   masterin: new URL("../../assets/images/projects/cards/masterin.JPG", import.meta.url).href,
   metoo: new URL("../../assets/images/projects/cards/metoo-care.JPG", import.meta.url).href,
   crud: new URL("../../assets/images/projects/cards/crud.JPG", import.meta.url).href,
   mbaCollege: new URL("../../assets/images/education/cards/executive-mba-ai-data-analytics/britts-imperial.jpg", import.meta.url).href,
+  mbaClassroom: new URL("../../assets/images/education/cards/executive-mba-ai-data-analytics/britts-classroom-empty.png", import.meta.url).href,
+  mbaSession: new URL("../../assets/images/education/cards/executive-mba-ai-data-analytics/britts-classroom-session.png", import.meta.url).href,
+  mbaGraduation: new URL("../../assets/images/education/cards/executive-mba-ai-data-analytics/britts-graduation-ceremony.webp", import.meta.url).href,
+  mbaLounge: new URL("../../assets/images/education/cards/executive-mba-ai-data-analytics/britts-campus-lounge.png", import.meta.url).href,
   college: new URL("../../assets/images/education/cards/be-electrical-electronics-engineering/engineering-college.jpg", import.meta.url).href,
-  hsc: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc.JPG", import.meta.url).href,
-  sslc: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-sslc.jpg", import.meta.url).href,
+  engineeringCampus: new URL("../../assets/images/education/cards/be-electrical-electronics-engineering/anna-university-engineering-campus.png", import.meta.url).href,
+  engineeringLab: new URL("../../assets/images/education/cards/be-electrical-electronics-engineering/electrical-engineering-lab.png", import.meta.url).href,
+  engineeringClassroom: new URL("../../assets/images/education/cards/be-electrical-electronics-engineering/engineering-classroom-seminar.png", import.meta.url).href,
+  engineeringGraduation: new URL("../../assets/images/education/cards/be-electrical-electronics-engineering/engineering-graduation-moment.png", import.meta.url).href,
+    hschome: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc.JPG", import.meta.url).href,
+  hsc: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc-campus.png", import.meta.url).href,
+  hscClassroom: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc-classroom.png", import.meta.url).href,
+  hscScienceLab: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc-science-lab.png", import.meta.url).href,
+  hscAssembly: new URL("../../assets/images/education/cards/hsc-srkv-school/srkv-hsc-assembly.png", import.meta.url).href,
+    sslchome: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-sslc.jpg", import.meta.url).href,
+  sslc: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-sports-ground.png", import.meta.url).href,
+  sslcCampus: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-campus.png", import.meta.url).href,
+  sslcClassroom: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-classroom.png", import.meta.url).href,
+  sslcSportsDay: new URL("../../assets/images/education/cards/sslc-st-joseph-school/st-joseph-sports-day.png", import.meta.url).href,
 };
 
 export const navItems = [
@@ -41,7 +60,7 @@ export const roles = [
 
 export const stats = [
   { value: "4+", label: "Years Experience" },
-  { value: "500+", label: "Daily Active Users Supported" },
+  { value: "50+", label: "Daily Active Users Supported" },
   { value: "6+", label: "Client CRM Projects" },
   { value: "15+", label: "Fintech and SaaS Modules" },
 ];
@@ -49,7 +68,7 @@ export const stats = [
 export const profile = {
   name: "Yuvaraj Rengasamy",
   title: "Full Stack Software Developer",
-  email: "yuvaraj998@gmail.com",
+  email: "yuvarajr998@gmail.com",
   phone: "+971 509780266",
   location: "Dubai, UAE",
   nationality: "Indian",
@@ -64,18 +83,18 @@ export const profile = {
 };
 
 export const skills = [
-  { name: "React JS", group: "Frontend", level: "Advanced", score: 92 },
+  { name: "React JS", group: "Frontend", level: "Advanced", score: 100 },
   { name: "Next.js", group: "Frontend", level: "Advanced", score: 88 },
-  { name: "JavaScript", group: "Frontend", level: "Advanced", score: 90 },
+  { name: "JavaScript", group: "Frontend", level: "Advanced", score: 100 },
   { name: "Tailwind CSS", group: "Design", level: "Advanced", score: 86 },
-  { name: "Bootstrap 5", group: "Design", level: "Advanced", score: 88 },
-  { name: "Material UI", group: "Design", level: "Professional", score: 78 },
-  { name: "PHP", group: "Backend", level: "Advanced", score: 86 },
-  { name: "Laravel", group: "Backend", level: "Advanced", score: 88 },
+  { name: "Bootstrap 5", group: "Design", level: "Advanced", score: 100 },
+  { name: "Material UI", group: "Design", level: "Professional", score: 90 },
+  { name: "PHP", group: "Backend", level: "Advanced", score: 100 },
+  { name: "Laravel", group: "Backend", level: "Advanced", score: 100 },
   { name: "REST API", group: "Backend", level: "Advanced", score: 90 },
-  { name: "MySQL", group: "Database", level: "Advanced", score: 84 },
+  { name: "MySQL", group: "Database", level: "Advanced", score: 100 },
   { name: "PostgreSQL", group: "Database", level: "Advanced", score: 82 },
-  { name: "MongoDB", group: "Database", level: "Professional", score: 78 },
+  { name: "MongoDB", group: "Database", level: "Professional", score: 100 },
   { name: "MT5 API", group: "Fintech", level: "Professional", score: 78 },
   { name: "Payments", group: "Fintech", level: "Advanced", score: 84 },
   { name: "AI Tools", group: "Productivity", level: "Advanced", score: 88 },
@@ -105,6 +124,26 @@ export const services = [
 
 export const projects = [
   {
+    title: "ProFX Expo Africa 2026",
+    domain: "Event Website and CRM",
+    image: images.profxExpo,
+    description:
+      "Event platform for ProFX Expo Africa with landing pages, registration flow, event information, sponsor content and lead-management support.",
+    tech: ["React", "Laravel", "Events", "CRM"],
+    live: "https://profxexpo.com/africa/",
+    code: "https://lead.profxmedia.com/",
+  },
+  {
+    title: "FINXCart Marketplace",
+    domain: "B2B Fintech Marketplace",
+    image: images.finxcart,
+    description:
+      "Multi-vendor marketplace for fintech services with vendor and customer portals, multi-currency support and multi-language workflows.",
+    tech: ["Laravel", "MySQL", "Marketplace", "Fintech"],
+    live: "https://www.finxcart.com/",
+    code: "https://www.finxcart.com/",
+  },
+  {
     title: "BridgeX Platform",
     domain: "Broker CRM SaaS",
     image: images.laptop,
@@ -125,29 +164,9 @@ export const projects = [
     code: "https://secure.stoxpips.com/",
   },
   {
-    title: "ProFX Events and Media",
-    domain: "Event CRM and Media Leads",
-    image: images.contact,
-    description:
-      "Delivered ProFX Summit, Expo Africa and Expo Australia with registration tracking, seat reservation, ticketing and SVG floor plans.",
-    tech: ["React", "Laravel", "CRM", "SVG"],
-    live: "https://profxsummit.com/",
-    code: "https://lead.profxmedia.com/",
-  },
-  {
-    title: "Fincxart Marketplace",
-    domain: "B2B Fintech Marketplace",
-    image: images.heroArt,
-    description:
-      "Multi-vendor marketplace for fintech services with vendor and customer portals, multi-currency support and multi-language workflows.",
-    tech: ["Laravel", "MySQL", "Marketplace", "Fintech"],
-    live: "https://fincxart.com/",
-    code: "https://fincxart.com/",
-  },
-  {
     title: "Bridging FX Academy",
     domain: "Learning Management System",
-    image: images.contactAlt,
+    image: images.bridgingAcademy,
     description:
       "Trading education LMS with course management, user management and responsive learning workflows for academy users.",
     tech: ["React", "Laravel", "LMS", "Admin"],
@@ -205,6 +224,7 @@ export const education = [
     period: "Jun 2025 - Current",
     status: "Current",
     image: images.mbaCollege,
+    galleryImages: [images.mbaClassroom, images.mbaSession, images.mbaGraduation, images.mbaLounge],
     badge: "Current Learning",
     articleTitle: "Learning to connect software delivery with business, data and AI decisions.",
     article:
@@ -221,10 +241,11 @@ export const education = [
     slug: "be-electrical-electronics-engineering",
     title: "Bachelor of Electrical and Electronics Engineering",
     shortTitle: "BE Electrical and Electronics Engineering",
-    place: "University College of Engineering Tiruchirappalli | AUBIT",
+    place: "Anna University College of Engineering  | Chennai",
     period: "2016 - 2020",
     status: "Completed",
     image: images.college,
+    galleryImages: [images.engineeringCampus, images.engineeringLab, images.engineeringClassroom, images.engineeringGraduation],
     badge: "Engineering Base",
     articleTitle: "The engineering phase that shaped my problem-solving discipline.",
     article:
@@ -244,7 +265,8 @@ export const education = [
     place: "S.R.K.V.HSS | Thiruppunavasal, Pudukkottai",
     period: "2014 - 2016",
     status: "Completed",
-    image: images.hsc,
+    image: images.hschome,
+    galleryImages: [images.hsc, images.hscClassroom, images.hscScienceLab, images.hscAssembly],
     badge: "Higher Secondary",
     articleTitle: "The stage where focus, consistency and career direction started becoming clear.",
     article:
@@ -264,7 +286,8 @@ export const education = [
     place: "ST.JOSEPH.H.S.S | Venkidakulam, Pudukkottai",
     period: "2009 - 2014",
     status: "Completed",
-    image: images.sslc,
+    image: images.sslchome,
+    galleryImages: [images.sslc, images.sslcCampus, images.sslcClassroom, images.sslcSportsDay],
     badge: "School Foundation",
     articleTitle: "The early learning phase that built discipline, curiosity and confidence.",
     article:
@@ -285,7 +308,6 @@ export const gallery = [
   { title: "Portfolio Identity", type: "Brand", image: images.logo },
   { title: "BridgeX Platform", type: "Fintech", image: images.laptop },
   { title: "Trading Infrastructure", type: "Fintech", image: images.android },
-  { title: "ProFX Events", type: "Events", image: images.contact },
   { title: "Masterin Project", type: "Project", image: images.masterin },
   { title: "Metoo.care Project", type: "Project", image: images.metoo },
   { title: "Executive MBA", type: "Education", image: images.mbaCollege },

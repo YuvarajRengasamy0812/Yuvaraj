@@ -36,20 +36,20 @@ export default function Home() {
           <div className="center-action"><AppLink className="old-btn" to="/skills">View All Skills <ArrowUpRight size={17} /></AppLink></div>
         </div>
       </section>
-      <section className="section white">
+      <section className="section white projects-showcase home-projects">
         <div className="section-inner">
-          <SectionHeading eyebrow="Selected projects" title="Project work with stronger product storytelling." />
-          <div className="project-grid">{projects.map((project) => <ProjectCard key={project.title} project={project} />)}</div>
+          <SectionHeading eyebrow="Selected projects" title="Featured platforms built for real users." />
+          <div className="project-grid">{projects.slice(0, 3).map((project) => <ProjectCard key={project.title} project={project} />)}</div>
           <div className="center-action"><AppLink className="old-btn" to="/projects">Projects Page <ArrowUpRight size={17} /></AppLink></div>
         </div>
       </section>
-      <section className="section soft">
+      <section className="section soft company-gradient-section home-working-section">
         <div className="section-inner">
           <SectionHeading eyebrow="Working experience" title="Company journey and delivery timeline." center />
           <ExperienceTimeline />
         </div>
       </section>
-      <section className="section white">
+      <section className="section white company-gradient-section home-contact-section">
         <div className="section-inner">
           <SectionHeading eyebrow="Contact" title="Let us build the next polished product experience." />
           <ContactPanel />
