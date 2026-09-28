@@ -15,7 +15,7 @@ export default function Travel() {
     <>
       <AnimatedPageHero
         eyebrow="Travel"
-        title="Chennai first, then the cities that shaped the journey."
+        title="Chennai First Then the Cities That Shaped the Journey"
         text="A personal travel journal across Tamil Nadu roots, Bengaluru work experience and Dubai career growth."
         image={travelHero}
         variant="travel"
@@ -26,7 +26,7 @@ export default function Travel() {
         <div className="section-inner">
           <SectionHeading
             eyebrow="Travel cards"
-            title="Places connected to roots, work and growth."
+            title="Places Connected to Roots Work and Growth"
             text="Click View to open a dedicated modern article page for each city."
           />
 
@@ -36,7 +36,6 @@ export default function Travel() {
                 <AppLink className="travel-card-button travel-card-link" to={`/travel/${destination.slug}`}>
                   <span className="travel-card-media">
                     <img src={destination.image} alt={`${destination.place}, ${destination.region}`} />
-                    <b>{destination.badge}</b>
                   </span>
                   <span className="travel-card-body">
                     <small>

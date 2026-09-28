@@ -13,14 +13,14 @@ export default function Company() {
     <>
       <AnimatedPageHero
         eyebrow="Company"
-        title="Experience across companies and product teams."
+        title="Experience Across Companies and Product Teams"
         text="A dedicated company page for roles, stacks, timelines and delivery work."
         image={companyHero}
         variant="company"
       />
       <section className="section soft company-page-section">
         <div className="section-inner">
-          <SectionHeading eyebrow="Working experience" title="A clear timeline from training to senior delivery." center />
+          <SectionHeading eyebrow="Working experience" title="A Clear Timeline from Training to Senior Delivery" center />
           <ExperienceTimeline />
         </div>
       </section>

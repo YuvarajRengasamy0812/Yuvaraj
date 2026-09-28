@@ -125,7 +125,7 @@ export default function Gallery() {
             </>
           ) : (
             <div className="gallery-empty" data-reveal>
-              <h2>No gallery images found</h2>
+              <h2>No Gallery Images Found</h2>
             </div>
           )}
         </div>

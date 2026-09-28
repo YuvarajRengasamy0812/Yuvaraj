@@ -80,7 +80,7 @@ export default function EducationArticle({ slug }) {
           <section className="edu-vision" data-reveal>
             <div className="edu-vision-heading">
               <p>My Reflection</p>
-              <h2>Why this education stage matters</h2>
+              <h2>Why This Education Stage Matters</h2>
               <span>{item.article}</span>
             </div>
 

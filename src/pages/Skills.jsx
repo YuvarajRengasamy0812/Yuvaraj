@@ -14,14 +14,14 @@ export default function Skills() {
     <>
       <AnimatedPageHero
         eyebrow="Skills"
-        title="Frontend, backend, database and AI tooling."
+        title="Frontend Backend Database and AI Tooling"
         text="A focused skills page with current React and Tailwind based engineering stack."
         image={skillsHero}
         variant="skills"
       />
       <section className="section dark">
         <div className="section-inner">
-          <SectionHeading eyebrow="Skills and abilities" title="A practical stack for shipping real products." light />
+          <SectionHeading eyebrow="Skills and abilities" title="A Practical Stack for Shipping Real Products" light />
           <SkillGrid />
           <AiMarquee />
         </div>

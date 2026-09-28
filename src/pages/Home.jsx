@@ -23,7 +23,7 @@ export default function Home() {
         <div className="split-layout">
           <div className="image-panel" data-reveal><img src={images.about} alt="Yuvaraj" /></div>
           <div data-reveal>
-            <SectionHeading eyebrow="About me" title="Software engineer with full-stack product experience." text={profile.summary} />
+            <SectionHeading eyebrow="About me" title="Software Engineer with Full-Stack Product Experience" text={profile.summary} />
             <div className="pill-list">{services.map((item) => <span key={item}>{item}</span>)}</div>
             <div className="action-row"><AppLink className="old-btn" to="/about">Open About <ArrowUpRight size={17} /></AppLink><a className="ghost-btn" href={profile.resume} target="_blank" rel="noreferrer">Resume <Download size={16} /></a></div>
           </div>
@@ -31,27 +31,27 @@ export default function Home() {
       </section>
       <section className="section dark">
         <div className="section-inner">
-          <SectionHeading eyebrow="Skills and abilities" title="A practical stack for shipping real products." light />
+          <SectionHeading eyebrow="Skills and abilities" title="A Practical Stack for Shipping Real Products" light />
           <SkillGrid compact />
           <div className="center-action"><AppLink className="old-btn" to="/skills">View All Skills <ArrowUpRight size={17} /></AppLink></div>
         </div>
       </section>
       <section className="section white projects-showcase home-projects">
         <div className="section-inner">
-          <SectionHeading eyebrow="Selected projects" title="Featured platforms built for real users." />
+          <SectionHeading eyebrow="Selected projects" title="Featured Platforms Built for Real Users" />
           <div className="project-grid">{projects.slice(0, 3).map((project) => <ProjectCard key={project.title} project={project} />)}</div>
           <div className="center-action"><AppLink className="old-btn" to="/projects">Projects Page <ArrowUpRight size={17} /></AppLink></div>
         </div>
       </section>
       <section className="section soft company-gradient-section home-working-section">
         <div className="section-inner">
-          <SectionHeading eyebrow="Working experience" title="Company journey and delivery timeline." center />
+          <SectionHeading eyebrow="Working experience" title="Company Journey and Delivery Timeline" center />
           <ExperienceTimeline />
         </div>
       </section>
       <section className="section white company-gradient-section home-contact-section">
         <div className="section-inner">
-          <SectionHeading eyebrow="Contact" title="Let us build the next polished product experience." />
+          <SectionHeading eyebrow="Contact" title="Let Us Build the Next Polished Product Experience" />
           <ContactPanel />
         </div>
       </section>

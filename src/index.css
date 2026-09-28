@@ -80,6 +80,7 @@ img {
 .app-shell {
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .site-header {
@@ -7625,4 +7626,265 @@ body,
 
 .stats-band .stat-box span {
   color: var(--sec-color);
+}
+
+/* Projects: centered action buttons */
+.projects-showcase .project-actions {
+  justify-content: center;
+}
+
+.projects-showcase .project-actions a {
+  flex: 1 1 0;
+  max-width: 150px;
+  justify-content: center;
+}
+
+/* Footer: brand + socials | quick links (2 columns) | contact details */
+.footer .footer-grid {
+  grid-template-columns: 1.3fr 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.footer .footer-brand p {
+  max-width: 420px;
+  margin: 14px 0 0;
+}
+
+.footer .footer-brand .footer-socials {
+  margin-top: 22px;
+}
+
+.footer .footer-links {
+  grid-template-columns: repeat(2, minmax(0, max-content));
+  column-gap: 44px;
+  row-gap: 12px;
+}
+
+.footer-contact {
+  display: grid;
+  gap: 16px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-contact li > span {
+  flex: 0 0 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: #00d9ff;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-contact a {
+  display: grid;
+  gap: 2px;
+  color: #e8ecf8;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.footer-contact a small {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-contact a:hover {
+  color: var(--theme-color);
+}
+
+@media (max-width: 900px) {
+  .footer .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About: personal story facts, journey tags and father's quote */
+.about-fact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.about-fact-grid > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1px solid rgba(203, 213, 225, 0.7);
+  border-radius: 14px;
+  padding: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.05);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-fact-grid > div:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 29, 72, 0.3);
+  box-shadow: 0 16px 34px rgba(8, 0, 53, 0.1);
+}
+
+.about-fact-grid span {
+  flex: 0 0 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: var(--theme-color);
+  background: rgba(255, 29, 72, 0.08);
+}
+
+.about-fact-grid p {
+  display: grid;
+  gap: 3px;
+  margin: 0;
+  color: #526174;
+  font-size: 14.5px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.about-fact-grid b {
+  color: var(--sec-color);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-timeline-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  padding: 4px 11px;
+  color: var(--theme-color);
+  background: rgba(255, 29, 72, 0.08);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.about-dubai-card p + p {
+  margin-top: 0;
+}
+
+.about-quote-card > p:not(.about-kicker) {
+  color: var(--sec-color);
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.4;
+}
+
+.about-quote-note {
+  display: block;
+  margin: 0 auto 18px;
+  max-width: 460px;
+  color: #667085;
+  font-size: 14.5px;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+:root[data-theme="dark"] .about-fact-grid > div {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: none;
+}
+
+:root[data-theme="dark"] .about-fact-grid p,
+:root[data-theme="dark"] .about-quote-note {
+  color: #cbd5e1;
+}
+
+:root[data-theme="dark"] .about-fact-grid b,
+:root[data-theme="dark"] .about-quote-card > p:not(.about-kicker) {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .about-fact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep floating bubbles clear of the longer quote card */
+.about-floating-stage {
+  width: min(1180px, calc(100% - 32px));
+  min-height: 520px;
+}
+
+.about-floating-stage .bubble-two { left: 10%; top: 16%; }
+.about-floating-stage .bubble-three { left: 15%; bottom: 10%; }
+.about-floating-stage .bubble-four { right: 12%; top: 10%; }
+.about-floating-stage .bubble-five { right: 5%; top: 42%; }
+
+@media (max-width: 700px) {
+  .about-floating-stage {
+    min-height: 640px;
+  }
+}
+
+/* About: personal photos fitted to their frames */
+.animated-page-hero--about .animated-page-hero-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.animated-page-hero--about .animated-page-hero-portrait img {
+  object-position: center;
+  filter: none;
+}
+
+.about-collage-top img { object-position: 55% 30%; }
+.about-collage-bottom img { object-position: 50% 35%; }
+.about-collage-main img { object-position: center top; }
+
+.about-floating-stage > img { object-position: center 20%; }
+.about-floating-stage .bubble-five { object-position: center 18%; }
+.about-floating-stage .bubble-six { object-position: center 30%; }
+.about-floating-stage .bubble-seven { object-position: center; }
+.about-floating-stage .bubble-three { object-position: 85% 30%; }
+
+/* Travel cards: three per row on wide screens, extra cards wrap to the next row */
+@media (min-width: 1200px) {
+  .travel-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1199px) {
+  .travel-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+  }
+}
+
+.travel-next-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }

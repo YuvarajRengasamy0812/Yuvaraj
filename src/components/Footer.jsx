@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, Code2, Mail, Send } from "lucide-react";
+import { BriefcaseBusiness, Code2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { navItems, profile } from "../data/portfolio";
 import AppLink from "./AppLink";
 
@@ -9,24 +9,19 @@ const socials = [
   { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
 ];
 
+const contacts = [
+  { label: "Address", value: profile.address, icon: MapPin, href: `https://www.google.com/maps?q=${encodeURIComponent(profile.address)}` },
+  { label: "Phone", value: profile.phone, icon: Phone, href: `tel:${profile.phone.replace(/[^+\d]/g, "")}` },
+  { label: "Email", value: profile.email, icon: Mail, href: `mailto:${profile.email}` },
+];
+
 export default function Footer({ currentPath }) {
   return (
     <footer className="footer">
       <div className="footer-grid">
-        <div>
+        <div className="footer-brand">
           <h2>Yuvaraj Portfolio</h2>
           <p>Thank you for visiting my personal portfolio website. Keep rising with clean code, strong UI and useful products.</p>
-        </div>
-        <div>
-          <h3>Quick links</h3>
-          <div className="footer-links">
-            {navItems.map((item) => (
-              <AppLink key={item.path} to={item.path} currentPath={currentPath}>{item.label}</AppLink>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h3>Connect</h3>
           <div className="footer-socials">
             {socials.map((social) => {
               const Icon = social.icon;
@@ -37,6 +32,31 @@ export default function Footer({ currentPath }) {
               );
             })}
           </div>
+        </div>
+        <div>
+          <h3>Quick links</h3>
+          <div className="footer-links">
+            {navItems.map((item) => (
+              <AppLink key={item.path} to={item.path} currentPath={currentPath}>{item.label}</AppLink>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <ul className="footer-contact">
+            {contacts.map((contact) => {
+              const Icon = contact.icon;
+              return (
+                <li key={contact.label}>
+                  <span><Icon size={17} /></span>
+                  <a href={contact.href} target={contact.label === "Address" ? "_blank" : undefined} rel="noreferrer">
+                    <small>{contact.label}</small>
+                    {contact.value}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
       <p className="footer-credit">Designed and rebuilt with React + Tailwind CSS by Yuvaraj R. (c) {new Date().getFullYear()}</p>

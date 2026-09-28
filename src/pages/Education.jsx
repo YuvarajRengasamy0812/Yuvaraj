@@ -13,7 +13,7 @@ export default function Education() {
     <>
       <AnimatedPageHero
         eyebrow="Education"
-        title="My education timeline in four simple stages."
+        title="My Education Timeline in Four Simple Stages"
         text="Small modern cards, one by one. Open each story to read the full article for that education phase."
         image={educationHero}
         variant="education"
@@ -22,7 +22,7 @@ export default function Education() {
         <div className="section-inner education-list-inner">
           <SectionHeading
             eyebrow="Education timeline"
-            title="Each row is one stage of my learning journey."
+            title="Each Row Is One Stage of My Learning Journey"
             center
             text="I kept the cards compact here. The full personal article opens on a separate page when you click Read Story."
           />

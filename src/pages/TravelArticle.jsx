@@ -1,5 +1,10 @@
 import { ArrowLeft, ArrowRight, Camera, Compass, MapPin, Route } from "lucide-react";
 import AppLink from "../components/AppLink";
+import TravelBlogArticle from "../components/TravelBlogArticle";
+import { bengaluruStory } from "../data/bengaluruStory";
+import { capeTownStory } from "../data/capeTownStory";
+
+const blogStories = { bengaluru: bengaluruStory, "cape-town": capeTownStory };
 import NotFound from "./NotFound";
 import { getTravelDestination, travelDestinations } from "../data/travel";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
@@ -14,6 +19,9 @@ export default function TravelArticle({ slug }) {
   if (!destination) return <NotFound />;
 
   const relatedPlaces = travelDestinations.filter((item) => item.slug !== destination.slug);
+
+  const blogStory = blogStories[destination.slug];
+  if (blogStory) return <TravelBlogArticle story={blogStory} related={relatedPlaces} />;
 
   return (
     <>
@@ -102,7 +110,7 @@ export default function TravelArticle({ slug }) {
               <Route size={17} />
               Continue the route
             </p>
-            <h2>Open another travel story.</h2>
+            <h2>Open Another Travel Story</h2>
           </div>
           <div className="travel-next-grid">
             {relatedPlaces.map((place) => (

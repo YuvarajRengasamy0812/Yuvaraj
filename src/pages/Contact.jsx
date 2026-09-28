@@ -13,14 +13,14 @@ export default function Contact() {
     <>
       <AnimatedPageHero
         eyebrow="Contact"
-        title="Contact for React, full-stack and UI modernization work."
+        title="Contact for React Full-Stack and UI Modernization Work"
         text="Send a message, open email or connect directly through the portfolio details."
         image={contactHero}
         variant="contact"
       />
       <section className="section white contact-page-section">
         <div className="section-inner">
-          <SectionHeading eyebrow="Contact" title="Let us build the next polished product experience." />
+          <SectionHeading eyebrow="Contact" title="Let Us Build the Next Polished Product Experience" />
           <ContactPanel />
         </div>
       </section>

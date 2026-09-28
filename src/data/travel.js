@@ -1,7 +1,8 @@
 const travelImages = {
-  chennai: new URL("../../assets/images/travel/cards/chennai-tamilnadu.png", import.meta.url).href,
-  dubai: new URL("../../assets/images/travel/cards/dubai-uae.png", import.meta.url).href,
-  bengaluru: new URL("../../assets/images/travel/cards/bengaluru-india.png", import.meta.url).href,
+  chennai: new URL("../../assets/images/travel/cards/chennai-ceg-guindy.jpg", import.meta.url).href,
+  dubai: new URL("../../assets/images/travel/cards/dubai-skyline-sunset.jpg", import.meta.url).href,
+  bengaluru: new URL("../../assets/images/travel/cards/bengaluru-vidhana-soudha.webp", import.meta.url).href,
+  capeTown: new URL("../../assets/images/travel/cards/cape-town-south-africa.jpg", import.meta.url).href,
 };
 
 export const travelDestinations = [
@@ -157,8 +158,8 @@ export const travelDestinations = [
     region: "India",
     badge: "Work phase",
     image: travelImages.bengaluru,
-    summary: "Pixalive phase with React.js, Next.js, enterprise UI, product thinking and full-stack confidence.",
-    meta: ["Tech city", "React", "Product UI"],
+    summary: "Three years I will never forget: my first IT job, Pixalive, good friends, rides, RCB and a city that taught me to live on my own.",
+    meta: ["3 years", "First IT job", "Pixalive"],
     articleTitle: "Bengaluru travel journal: tech-city learning and product confidence",
     intro: "Bengaluru is the work-building chapter. It connects software practice, frontend growth, product teams, API work and the confidence that comes from shipping real screens.",
     stats: [
@@ -198,6 +199,19 @@ export const travelDestinations = [
         steps: ["Place Bengaluru between roots and current work.", "Use it as the skill-building chapter.", "Keep the route easy to scan."],
       },
     ],
+  },
+  {
+    slug: "cape-town",
+    place: "Cape Town",
+    region: "South Africa",
+    badge: "Travel",
+    image: travelImages.capeTown,
+    summary: "Amazing people, cool weather, stunning hills, endless sea views, lush green forests and the cold Atlantic Ocean. 🌍🌊",
+    meta: ["Atlantic Ocean", "Hills", "Sea views"],
+    articleTitle: "Cape Town: Hills Sea Views and the Cold Atlantic",
+    intro: "A beautiful place with amazing people, cool weather, stunning hills, endless sea views, lush green forests and the cold Atlantic Ocean.",
+    stats: [],
+    sections: [],
   },
 ];
 
