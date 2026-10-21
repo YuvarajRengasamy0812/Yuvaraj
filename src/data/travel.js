@@ -110,8 +110,8 @@ export const travelDestinations = [
     region: "UAE",
     badge: "Current",
     image: travelImages.dubai,
-    summary: "Current work location for fintech CRM, SaaS platforms, AI analytics learning and ambitious product delivery.",
-    meta: ["Work city", "Fintech", "AI learning"],
+    summary: "A journey of struggle, learning and hope: MBA in Sharjah, a new job, Deira and Karama streets, salary lessons and family as my biggest motivation.",
+    meta: ["Current", "MBA", "Work life"],
     articleTitle: "Dubai travel journal: current work, ambition and modern city energy",
     intro: "Dubai represents the current chapter: professional growth, fintech product work, AI learning and a city rhythm built around speed, structure and possibility.",
     stats: [

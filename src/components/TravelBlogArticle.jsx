@@ -17,6 +17,10 @@ const accentStyle = (index) => {
   return { "--accent": a, "--accent-2": b };
 };
 
+// List-style items can be plain strings or { text|label, icon } objects with a custom glyph.
+const itemText = (item) => (typeof item === "string" ? item : item.text ?? item.label);
+const itemIcon = (item, Fallback) => (typeof item === "string" ? Fallback : item.icon ?? Fallback);
+
 function MediaPlaceholder({ kind }) {
   const Icon = kind === "video" ? Play : Camera;
   return (
@@ -71,29 +75,40 @@ function Block({ block }) {
     case "tags":
       return (
         <div className="blog-tags">
-          {block.items.map((tag, index) => <span key={tag} style={accentStyle(index)}><MapPin size={14} /> {tag}</span>)}
+          {block.items.map((tag, index) => {
+            const TagIcon = itemIcon(tag, MapPin);
+            return <span key={itemText(tag)} style={accentStyle(index)}><TagIcon size={14} /> {itemText(tag)}</span>;
+          })}
         </div>
       );
     case "list":
       return (
         <ul className="blog-list">
-          {block.items.map((item, index) => <li key={item} style={accentStyle(index)}><CheckCircle2 size={20} /> {item}</li>)}
+          {block.items.map((item, index) => {
+            const ItemIcon = itemIcon(item, CheckCircle2);
+            return <li key={itemText(item)} style={accentStyle(index)}><ItemIcon size={20} /> {itemText(item)}</li>;
+          })}
         </ul>
       );
     case "checklist":
       return (
         <div className="blog-checklist">
-          {block.items.map((item, index) => <span key={item} style={accentStyle(index)}><CheckCircle2 size={16} /> {item}</span>)}
+          {block.items.map((item, index) => {
+            const ItemIcon = itemIcon(item, CheckCircle2);
+            return <span key={itemText(item)} style={accentStyle(index)}><ItemIcon size={16} /> {itemText(item)}</span>;
+          })}
         </div>
       );
-    case "closing":
+    case "closing": {
+      const ClosingIcon = block.icon ?? PenLine;
       return (
         <div className="blog-closing">
-          <PenLine size={30} />
+          <ClosingIcon size={30} />
           {block.lines.map((line) => <p key={line}>{line}</p>)}
           <strong>{block.signoff}</strong>
         </div>
       );
+    }
     default:
       return null;
   }
@@ -103,6 +118,7 @@ export default function TravelBlogArticle({ story, related }) {
   const [progress, setProgress] = useState(0);
   const [active, setActive] = useState(story.sections[0].id);
   const [titleMain, titleAccent] = story.title.split(": ");
+  const KickerIcon = story.kickerIcon ?? PenLine;
 
   useEffect(() => {
     const onScroll = () => {
@@ -141,7 +157,7 @@ export default function TravelBlogArticle({ story, related }) {
 
         <div className="blog-container blog-hero-inner" data-reveal>
           <AppLink className="blog-back" to="/travel"><ArrowLeft size={16} /> Back to travel</AppLink>
-          <span className="blog-kicker"><PenLine size={14} /> {story.kicker}</span>
+          <span className="blog-kicker"><KickerIcon size={14} /> {story.kicker}</span>
           <h1>
             {titleMain}
             {titleAccent && <span>{titleAccent}</span>}
@@ -163,6 +179,7 @@ export default function TravelBlogArticle({ story, related }) {
         <div className="blog-container blog-facts">
           {story.facts.map((fact, index) => (
             <div key={fact.label} style={accentStyle(index)}>
+              {fact.icon && <fact.icon size={26} />}
               <strong>{fact.value}</strong>
               <span>{fact.label}</span>
             </div>
@@ -215,7 +232,7 @@ export default function TravelBlogArticle({ story, related }) {
           {story.sections.map((section, index) => (
             <section key={section.id} id={section.id} className="blog-section" style={accentStyle(index)} data-reveal>
               <div className="blog-section-head">
-                <span className="blog-chapter">{String(index + 1).padStart(2, "0")}</span>
+                <span className="blog-chapter">{section.icon ? <section.icon size={28} /> : String(index + 1).padStart(2, "0")}</span>
                 <div>
                   <small>Chapter {index + 1}</small>
                   <h2>{section.heading}</h2>

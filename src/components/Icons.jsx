@@ -176,6 +176,26 @@ export function DownloadSave({ size = 18, strokeWidth = 1.8, className = "", ...
   );
 }
 
+/* Travel: Dubai story */
+export const BurjKhalifa = draw("BurjKhalifa", <path d="M12 2v3M10.5 21V9.5L12 5l1.5 4.5V21M8 21v-6.5l2.5-2M16 21v-6.5l-2.5-2M4 21h16" />);
+export const Plane = draw("Plane", <path d="M12 2.5c-.9 0-1.5.7-1.5 1.6v5.4L3 14v2l7.5-2.2v4.6L8.5 20v1.5l3.5-1 3.5 1V20l-2-1.6v-4.6L21 16v-2l-7.5-4.5V4.1c0-.9-.6-1.6-1.5-1.6z" />);
+export const BedSpace = draw("BedSpace", <><path d="M3 19V6M3 15h18v4M21 15v-2.5A2.5 2.5 0 0 0 18.5 10H11v5" /><circle cx="7" cy="12" r="1.8" /></>);
+export const LaptopCode = draw("LaptopCode", <><rect x="4" y="5" width="16" height="11" rx="1.5" /><path d="M2.5 19.5h19M10 8.5l-2 2 2 2M14 8.5l2 2-2 2" /></>);
+export const MarketStall = draw("MarketStall", <path d="M3.5 9 5 4h14l1.5 5M3.5 9a2.1 2.1 0 0 0 4.25 0 2.1 2.1 0 0 0 4.25 0 2.1 2.1 0 0 0 4.25 0 2.1 2.1 0 0 0 4.25 0M5 11.5V20h14v-8.5M10 20v-5h4v5" />);
+export const TeaCup = draw("TeaCup", <path d="M5 9h11v5a4.5 4.5 0 0 1-4.5 4.5h-2A4.5 4.5 0 0 1 5 14zM16 10.5h1.5a2.3 2.3 0 0 1 0 4.6H16M4 21h13M9 3.5c-.6.9-.6 1.8 0 2.7M12.5 3.5c-.6.9-.6 1.8 0 2.7" />);
+export const HardHat = draw("HardHat", <path d="M3.5 17.5h17M5 17.5v-3a7 7 0 0 1 14 0v3M10 7.8v3.7M14 7.8v3.7M10 7.8a7 7 0 0 1 4 0" />);
+export const Coins = draw("Coins", <><circle cx="9" cy="9" r="5.5" /><path d="M15.6 9.6a5.5 5.5 0 1 1-6 6M7.5 7h1.6a2 2 0 0 1 0 4H7.5zM7.5 7v4" /></>);
+export const Wallet = draw("Wallet", <><path d="M4 8V7.5A2.5 2.5 0 0 1 6.5 5H17v3" /><rect x="4" y="8" width="16" height="11.5" rx="2.5" /><path d="M20 12h-3.5a1.75 1.75 0 0 0 0 3.5H20" /></>);
+export const Hourglass = draw("Hourglass", <path d="M6.5 3h11M6.5 21h11M7.5 3c0 4 4.5 5.5 4.5 9s-4.5 5-4.5 9M16.5 3c0 4-4.5 5.5-4.5 9s4.5 5 4.5 9M9.5 18.5h5" />);
+export const Scales = draw("Scales", <path d="M12 4v16M8 20h8M5 7h14M5 7l-2.5 6a2.5 2.5 0 0 0 5 0zM19 7l-2.5 6a2.5 2.5 0 0 0 5 0z" />);
+export const HomeHeart = draw("HomeHeart", <path d="M3.5 11 12 4l8.5 7M6 9.5v10h12v-10M12 17s-3-1.8-3-3.7a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 1.9-3 3.7-3 3.7z" />);
+export const PalmTree = draw("PalmTree", <path d="M12 21c0-5 .5-8 1-10M13 11c-1.5-3-4.5-4-8-3 2.5.5 4.5 1.5 6 3M13 11c1-3 4-4.5 7.5-4-2.5 1-4.5 2.2-5.5 4M13 11c-3-.5-6 .5-7.5 3M13 11c3-.3 5.5 1 7 3.5M8 21h9" />);
+export const ShoppingBag = draw("ShoppingBag", <path d="M5 8h14l-1 12.5H6zM9 8V6.5a3 3 0 0 1 6 0V8" />);
+export const RunningShoe = draw("RunningShoe", <path d="M3 17.5h18M3 17.5v-3l4-6 3 2 2.5-1 1 3 5 1.5a2.5 2.5 0 0 1 2.5 2.5v1M8 12.5l1.5 1M10.5 11.5l1.5 1" />);
+export const Smile = draw("Smile", <><circle cx="12" cy="12" r="9" /><path d="M8.5 14.5c1.9 2 5.1 2 7 0M9 9.5h.01M15 9.5h.01" /></>);
+export const Backpack = draw("Backpack", <path d="M7 8a5 5 0 0 1 10 0v11.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 19.5zM10 3.5h4M9.5 13h5v3.5h-5z" />);
+export const Leaf = draw("Leaf", <path d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14zM5 19l7-7" />);
+
 /* Analytics page extras */
 export const Instagram = draw("Instagram", <><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><path d="M17.3 6.7h.01" /></>);
 export const Facebook = draw("Facebook", <path d="M14.5 21v-7.5h2.7l.4-3.2h-3.1V8.4c0-.9.3-1.6 1.6-1.6h1.6V4a20 20 0 0 0-2.4-.1c-2.4 0-4 1.4-4 4.1v2.3H8.6v3.2h2.7V21" />);

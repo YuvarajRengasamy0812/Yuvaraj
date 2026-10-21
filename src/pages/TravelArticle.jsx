@@ -3,8 +3,9 @@ import AppLink from "../components/AppLink";
 import TravelBlogArticle from "../components/TravelBlogArticle";
 import { bengaluruStory } from "../data/bengaluruStory";
 import { capeTownStory } from "../data/capeTownStory";
+import { dubaiStory } from "../data/dubaiStory";
 
-const blogStories = { bengaluru: bengaluruStory, "cape-town": capeTownStory };
+const blogStories = { bengaluru: bengaluruStory, dubai: dubaiStory, "cape-town": capeTownStory };
 import NotFound from "./NotFound";
 import { getTravelDestination, travelDestinations } from "../data/travel";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";

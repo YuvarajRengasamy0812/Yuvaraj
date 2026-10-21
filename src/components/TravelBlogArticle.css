@@ -264,6 +264,14 @@
   font-weight: 800;
 }
 
+.blog-facts svg {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
 /* Layout */
 .blog-layout {
   display: grid;
