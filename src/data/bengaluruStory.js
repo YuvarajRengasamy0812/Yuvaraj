@@ -3,6 +3,7 @@
 // src: new URL("../../assets/images/travel/bengaluru/shanti-nagar.jpg", import.meta.url).href
 
 const heroImage = new URL("../../assets/images/travel/cards/bengaluru-vidhana-soudha.webp", import.meta.url).href;
+const video = (file) => new URL(`../../assets/videos/travel/bengaluru/${file}`, import.meta.url).href;
 const moment = (file) => new URL(`../../assets/images/travel/bengaluru/${file}`, import.meta.url).href;
 
 export const bengaluruStory = {
@@ -12,7 +13,7 @@ export const bengaluruStory = {
   author: "Yuvaraj Rengasamy",
   location: "Bengaluru, Karnataka",
   readTime: "9 min read",
-  hero: { src: heroImage, caption: "Bengaluru, the city where I learned to live life on my own." },
+  hero: { src: moment("rcb-champions-hero.jpg"), caption: "Bengaluru, the city where I learned to live life on my own." },
   momentsTitle: "Bengaluru moments",
   // Small photos that float in the sidebar animation
   moments: [
@@ -38,7 +39,7 @@ export const bengaluruStory = {
         { type: "lead", text: "After completing my college, one of the biggest changes in my life happened. I moved outside Tamil Nadu for the first time and came to Bengaluru." },
         { type: "p", text: "For me, it was completely new. New state, new language, new people, new place and a new life. Before that, I had mostly lived around my hometown and college. Suddenly, I was in Bengaluru, where I could see people from different states and hear Kannada, Hindi, Tamil, Malayalam and many other languages everywhere." },
         { type: "p", text: "My first place in Bengaluru was Shanti Nagar. I joined an institute there for a Full Stack Development course. It was a three-month course and during that time I stayed in a PG." },
-        { type: "image", src: null, caption: "Shanti Nagar, my first address in Bengaluru, and the PG where it all started." },
+        { type: "image", src: moment("flo-church-street.jpg"), caption: "My early days exploring Bengaluru, at FLO on Church Street." },
         { type: "p", text: "Those three months were not only about studying. It was also the first time I really started learning how to live independently." },
         { type: "p", text: "Bengaluru climate was one of the first things I liked. The weather was usually cool compared to the places I was used to. When it rained, I really liked the city. The roads, the weather, the greenery and the ups and downs in some areas made Bengaluru look very beautiful to me." },
       ],
@@ -59,7 +60,7 @@ export const bengaluruStory = {
       blocks: [
         { type: "p", text: "Finally, I got an opportunity in a mid-level company inside a tech park near Electronic City. For me, getting that job was a big moment. After so many interviews and waiting, I finally got an opportunity and joined the company happily." },
         { type: "p", text: "That company became a very important part of my Bengaluru life. Around 50% of the people there were Tamil, and the others were from different places like Karnataka, Kerala, North India and other parts of India. I met many good people there." },
-        { type: "image", src: null, caption: "The tech park near Electronic City where my first IT job began." },
+        { type: "image", src: moment("first-job-colleagues.jpg"), position: "center 35%", caption: "Colleagues from my first IT job near Electronic City." },
         { type: "p", text: "My colleagues helped me a lot. I learned many things from them, both technically and personally. Slowly I learned how to manage work, people, responsibilities and life in a new city. I worked there for around one year." },
       ],
     },
@@ -71,8 +72,8 @@ export const bengaluruStory = {
         { type: "p", text: "Bengaluru itself is interesting because every area feels different. HSR Layout has one type of vibe, Koramangala has another vibe, Electronic City feels completely different, and the same goes for KR Puram, Shivajinagar, Silk Board and other areas." },
         { type: "p", text: "At Pixalive, I got some really good friends. We had a nice work-life balance. We worked together, talked a lot, had fun and enjoyed our time. The friends I made there made my Bengaluru life much more enjoyable." },
         { type: "gallery", items: [
-          { src: null, caption: "Team moments at Pixalive" },
-          { src: null, caption: "Friends who made Bengaluru home" },
+          { src: moment("pixalive-office.jpg"), position: "center 40%", caption: "Team moments at Pixalive" },
+          { src: moment("friends-rooftop.jpg"), caption: "Friends who made Bengaluru home" },
         ] },
         { type: "p", text: "After one year, Pixalive shifted to Electronic City. Electronic City was a completely different experience because of the IT parks, companies and the huge number of people working there." },
       ],
@@ -86,7 +87,7 @@ export const bengaluruStory = {
         { type: "quote", text: "You cannot talk about Bengaluru without talking about traffic. 😂" },
         { type: "p", text: "Sometimes even a small distance can take a lot of time. And during Diwali and Pongal, going back to my hometown from Bengaluru was always difficult because of the traffic and crowds. But somehow, even those difficult journeys became part of my memories." },
         { type: "p", text: "I also really enjoyed riding around Bengaluru, especially some roads around Electronic City and Mysore Road. Sometimes when the road was relatively empty, riding on a single road with the Bengaluru weather felt really good." },
-        { type: "video", src: null, poster: null, caption: "Riding around Electronic City and Mysore Road." },
+        { type: "video", src: video("bengaluru-skyline-night.mp4"), poster: video("bengaluru-skyline-night-poster.jpg"), caption: "Bengaluru skyline at night." },
         { type: "p", text: "There was no big plan. Just riding, looking at the road, feeling the weather and enjoying the moment. Those simple moments are some of my favourite memories." },
       ],
     },
@@ -97,7 +98,7 @@ export const bengaluruStory = {
         { type: "p", text: "Another very important part of my Bengaluru connection is RCB. I have liked RCB since around 2008, when I was in 5th standard." },
         { type: "p", text: "When I came to Bengaluru and actually saw how people supported RCB, I understood the connection even more. The stadium atmosphere, the jerseys, the flags, the celebrations and the discussions around the team were all different." },
         { type: "p", text: "Sometimes people even fight with their friends because of different teams. 😄 But whenever RCB plays, the whole atmosphere becomes different. People celebrate together and the city gets a different energy." },
-        { type: "video", src: null, poster: null, caption: "Match day energy in Bengaluru." },
+        { type: "video", src: video("rcb-virat-kohli.mp4"), poster: video("rcb-virat-kohli-poster.jpg"), caption: "Virat Kohli on Bengaluru. Match day energy." },
         { type: "quote", text: "For me, RCB has always been more than just a cricket team. It is one of the things that makes my connection with Bengaluru even stronger." },
       ],
     },
@@ -121,9 +122,9 @@ export const bengaluruStory = {
         { type: "tags", items: ["Koramangala", "Church Street", "HSR Layout", "KR Puram", "Shivajinagar", "Electronic City", "Mysore Road", "Silk Board"] },
         { type: "p", text: "I especially liked the vibe around Koramangala and Church Street. New Year celebrations in Bengaluru are something I cannot forget. The lights, people, music, food, streets and overall atmosphere make the city feel completely different. Church Street during that time has a different kind of energy." },
         { type: "gallery", items: [
-          { src: null, caption: "Church Street on New Year's Eve" },
-          { src: null, caption: "Evenings around Koramangala" },
-          { src: null, caption: "Local markets and small streets" },
+          { src: moment("church-street-night.jpg"), caption: "Neon nights on Church Street" },
+          { src: moment("koramangala-bloom.jpg"), caption: "Pink blossoms along the roads of Koramangala" },
+          { src: moment("pub-street-night.jpg"), caption: "Bright streets and nightlife" },
         ] },
         { type: "p", text: "I also liked the small streets and local markets. You can find grocery shops, small stores, MRP shops, food places and different kinds of people almost everywhere. The city always felt alive. Even the malls and IT parks had their own beauty." },
       ],

@@ -622,6 +622,16 @@
   box-shadow: 0 20px 44px rgba(8, 0, 53, 0.14);
 }
 
+.blog-video--portrait {
+  max-width: 360px;
+  margin-inline: auto;
+}
+
+.blog-video--portrait video {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+}
+
 .blog-figure figcaption {
   display: flex;
   align-items: center;

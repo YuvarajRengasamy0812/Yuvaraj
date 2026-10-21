@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Header from "./Header";
+import BottomNav from "./BottomNav";
 import Footer from "./Footer";
 
 export default function Layout({ children, currentPath }) {
@@ -12,6 +13,7 @@ export default function Layout({ children, currentPath }) {
       <Header currentPath={currentPath} />
       <main>{children}</main>
       <Footer currentPath={currentPath} />
+      <BottomNav currentPath={currentPath} />
     </div>
   );
 }

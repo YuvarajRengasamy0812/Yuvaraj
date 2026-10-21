@@ -4,3 +4,7 @@ dist/
 .env.local
 .DS_Store
 *.zip
+
+# local visit log written by the Vite dev server
+analytics/
+.netlify/

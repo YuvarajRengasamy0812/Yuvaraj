@@ -1,4 +1,4 @@
-import { CalendarDays, Mail, MapPin, Phone, Send } from "lucide-react";
+import { CalendarDays, Mail, MapPin, Phone, Send } from "./Icons";
 import { profile } from "../data/portfolio";
 import { useDateTime } from "../hooks/useDateTime";
 

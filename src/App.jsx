@@ -12,6 +12,8 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Travel from "./pages/Travel";
 import TravelArticle from "./pages/TravelArticle";
+import Visitors from "./pages/Visitors";
+import { useVisitTracker } from "./hooks/useVisitTracker";
 
 const routes = {
   "/": Home,
@@ -23,10 +25,12 @@ const routes = {
   "/company": Company,
   "/travel": Travel,
   "/contact": Contact,
+  "/visitors": Visitors,
 };
 
 export default function App() {
   const [path, setPath] = useState(window.location.pathname || "/");
+  useVisitTracker(path);
 
   useEffect(() => {
     const onPopState = () => setPath(window.location.pathname || "/");

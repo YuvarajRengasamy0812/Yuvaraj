@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2 } from "lucide-react";
+import { Code2, DoorEnter } from "./Icons";
 
 export default function ProjectCard({ project }) {
   return (
@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
         <span>{project.description}</span>
         <div className="tag-row">{project.tech.map((tech) => <b key={tech}>{tech}</b>)}</div>
         <div className="project-actions">
-          <a href={project.live} target="_blank" rel="noreferrer">View <ArrowUpRight size={15} /></a>
+          <a href={project.live} target="_blank" rel="noreferrer">View <DoorEnter size={18} /></a>
           <a href={project.code} target="_blank" rel="noreferrer">Code <Code2 size={15} /></a>
         </div>
       </div>

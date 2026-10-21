@@ -1,4 +1,4 @@
-import { ChevronLeft, ChevronRight, Download, Share2, X, ZoomIn, ZoomOut } from "lucide-react";
+import { ChevronLeft, ChevronRight, DownloadSave, Share2, X, ZoomIn, ZoomOut } from "../components/Icons";
 import { useEffect, useMemo, useState } from "react";
 import galleryHero from "../../assets/images/gallery/banner/gallery-hero-banner.png";
 import { useDocumentTitle } from "../hooks/useDocumentTitle";
@@ -134,7 +134,7 @@ export default function Gallery() {
       {activeImage ? (
         <div className="gallery-modal" role="dialog" aria-modal="true" onClick={() => setActiveIndex(null)}>
           <div className="gallery-modal-toolbar" onClick={(event) => event.stopPropagation()}>
-            <a href={activeImage.image} download={activeImage.filename} aria-label="Download image"><Download size={19} /></a>
+            <a href={activeImage.image} download={activeImage.filename} aria-label="Download image"><DownloadSave size={19} /></a>
             <button type="button" aria-label="Zoom out" onClick={() => setZoom((value) => Math.max(1, value - 0.2))}><ZoomOut size={19} /></button>
             <button type="button" aria-label="Zoom in" onClick={() => setZoom((value) => Math.min(2.6, value + 0.2))}><ZoomIn size={19} /></button>
             <button type="button" aria-label="Share image" onClick={shareImage}><Share2 size={19} /></button>

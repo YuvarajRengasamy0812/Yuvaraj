@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, Camera, Compass, MapPin, Route } from "lucide-react";
+import { ArrowLeft, ArrowRight, Camera, DoorEnter, Compass, MapPin, Route } from "../components/Icons";
 import AppLink from "../components/AppLink";
 import TravelBlogArticle from "../components/TravelBlogArticle";
 import { bengaluruStory } from "../data/bengaluruStory";
@@ -120,7 +120,7 @@ export default function TravelArticle({ slug }) {
                 <strong>{place.place}</strong>
                 <i>
                   View article
-                  <ArrowRight size={16} />
+                  <DoorEnter size={18} />
                 </i>
               </AppLink>
             ))}

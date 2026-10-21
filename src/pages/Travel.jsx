@@ -1,4 +1,4 @@
-import { ArrowRight, MapPin } from "lucide-react";
+import { DoorEnter, MapPin } from "../components/Icons";
 import AnimatedPageHero from "../components/AnimatedPageHero";
 import AppLink from "../components/AppLink";
 import SectionHeading from "../components/SectionHeading";
@@ -46,7 +46,7 @@ export default function Travel() {
                     <span>{destination.summary}</span>
                     <i>
                       View article
-                      <ArrowRight size={16} />
+                      <DoorEnter size={18} />
                     </i>
                   </span>
                 </AppLink>

@@ -1,22 +1,22 @@
 import {
-  BrainCircuit,
+  Lightbulb,
   Briefcase,
   Building2,
   Cloud,
   Code2,
   Compass,
-  Download,
+  DoorEnter,
+  DownloadSave,
   GraduationCap,
   Home,
   Mail,
   MapPin,
   Phone,
   Quote,
-  Rocket,
   ShieldCheck,
   Trophy,
   Users,
-} from "lucide-react";
+} from "../components/Icons";
 import AppLink from "../components/AppLink";
 import AnimatedPageHero from "../components/AnimatedPageHero";
 import aboutHero from "../../assets/images/about/hero/about-hero-banner.png";
@@ -66,7 +66,7 @@ const focusCards = [
   { icon: Code2, label: "IT and Full Stack", value: "Building web products with React, Next.js, PHP and Laravel" },
   { icon: Cloud, label: "Cloud Engineering", value: "Learning to deploy, scale and run systems in the cloud" },
   { icon: ShieldCheck, label: "Cybersecurity", value: "Secure workflows, authentication and access control" },
-  { icon: BrainCircuit, label: "Artificial Intelligence", value: "Following AI closely and using it in everyday engineering" },
+  { icon: Lightbulb, label: "Artificial Intelligence", value: "Following AI closely and using it in everyday engineering" },
 ];
 
 const floatingImages = [
@@ -115,8 +115,8 @@ export default function About() {
               })}
             </div>
             <div className="about-action-row">
-              <a href={profile.resume} target="_blank" rel="noreferrer" className="old-btn">Download Resume <Download size={17} /></a>
-              <AppLink to="/projects" className="ghost-btn">View Projects <Rocket size={17} /></AppLink>
+              <a href={profile.resume} download="Yuvaraj-Rengasamy-Resume.pdf" className="old-btn">Download Resume <DownloadSave /></a>
+              <AppLink to="/projects" className="ghost-btn">View Projects <DoorEnter /></AppLink>
             </div>
           </div>
 

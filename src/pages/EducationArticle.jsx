@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, BookOpenText, CalendarDays, GraduationCap, MapPin, Sparkles } from "lucide-react";
+import { ArrowLeft, BookOpenText, DoorEnter, CalendarDays, GraduationCap, MapPin, PenLine } from "../components/Icons";
 import AppLink from "../components/AppLink";
 import PageHero from "../components/PageHero";
 import { education } from "../data/portfolio";
@@ -116,7 +116,7 @@ export default function EducationArticle({ slug }) {
             {next ? (
               <AppLink to={`/education/${next.slug}`} className="story-nav-card next">
                 <span><b>Next</b>{next.shortTitle ?? next.title}</span>
-                <ArrowRight size={18} />
+                <DoorEnter />
               </AppLink>
             ) : <div />}
           </div>

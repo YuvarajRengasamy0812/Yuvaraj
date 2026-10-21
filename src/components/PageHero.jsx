@@ -1,5 +1,4 @@
-import { ChevronRight } from "lucide-react";
-import AppLink from "./AppLink";
+import ActiveButton from "./ActiveButton";
 
 export default function PageHero({ eyebrow, title, text }) {
   return (
@@ -8,7 +7,7 @@ export default function PageHero({ eyebrow, title, text }) {
         <p>{eyebrow}</p>
         <h1>{title}</h1>
         {text ? <span>{text}</span> : null}
-        <div className="breadcrumb"><AppLink to="/">Home</AppLink><ChevronRight size={16} />{eyebrow}</div>
+        <ActiveButton />
       </div>
     </section>
   );

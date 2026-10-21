@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowLeft, ArrowRight, CalendarDays, Camera, CheckCircle2, Clock, MapPin, Play, Quote, Route, Sparkles } from "lucide-react";
+import { ArrowLeft, CalendarDays, Camera, CheckCircle2, Clock, MapPin, Play, Quote, Route, PenLine, DoorEnter } from "./Icons";
 import AppLink from "./AppLink";
 import "./TravelBlogArticle.css";
 
@@ -27,10 +27,10 @@ function MediaPlaceholder({ kind }) {
   );
 }
 
-function BlogImage({ src, caption }) {
+function BlogImage({ src, caption, position }) {
   return (
     <figure className="blog-figure">
-      {src ? <img src={src} alt={caption} loading="lazy" /> : <MediaPlaceholder kind="image" />}
+      {src ? <img src={src} alt={caption} loading="lazy" style={position ? { objectPosition: position } : undefined} /> : <MediaPlaceholder kind="image" />}
       <figcaption>{caption}</figcaption>
     </figure>
   );
@@ -50,16 +50,16 @@ function Block({ block }) {
         </blockquote>
       );
     case "image":
-      return <BlogImage src={block.src} caption={block.caption} />;
+      return <BlogImage src={block.src} caption={block.caption} position={block.position} />;
     case "gallery":
       return (
         <div className={`blog-gallery blog-gallery--${block.items.length}`}>
-          {block.items.map((item) => <BlogImage key={item.caption} src={item.src} caption={item.caption} />)}
+          {block.items.map((item) => <BlogImage key={item.caption} src={item.src} caption={item.caption} position={item.position} />)}
         </div>
       );
     case "video":
       return (
-        <figure className="blog-figure blog-video">
+        <figure className={`blog-figure blog-video${block.portrait ? " blog-video--portrait" : ""}`}>
           {block.src ? (
             <video src={block.src} poster={block.poster || undefined} controls playsInline preload="metadata" />
           ) : (
@@ -89,7 +89,7 @@ function Block({ block }) {
     case "closing":
       return (
         <div className="blog-closing">
-          <Sparkles size={30} />
+          <PenLine size={30} />
           {block.lines.map((line) => <p key={line}>{line}</p>)}
           <strong>{block.signoff}</strong>
         </div>
@@ -141,7 +141,7 @@ export default function TravelBlogArticle({ story, related }) {
 
         <div className="blog-container blog-hero-inner" data-reveal>
           <AppLink className="blog-back" to="/travel"><ArrowLeft size={16} /> Back to travel</AppLink>
-          <span className="blog-kicker"><Sparkles size={14} /> {story.kicker}</span>
+          <span className="blog-kicker"><PenLine size={14} /> {story.kicker}</span>
           <h1>
             {titleMain}
             {titleAccent && <span>{titleAccent}</span>}
@@ -239,7 +239,7 @@ export default function TravelBlogArticle({ story, related }) {
                   <span>{place.region}</span>
                   <strong>{place.place}</strong>
                   <p>{place.summary}</p>
-                  <i>Read story <ArrowRight size={15} /></i>
+                  <i>Read story <DoorEnter size={18} /></i>
                 </div>
               </AppLink>
             ))}

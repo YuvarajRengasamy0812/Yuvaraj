@@ -1,5 +1,4 @@
-import { ChevronRight } from "lucide-react";
-import AppLink from "./AppLink";
+import ActiveButton from "./ActiveButton";
 
 const motionItems = Array.from({ length: 42 }, (_, index) => ({
   left: `${(index * 29) % 100}%`,
@@ -20,7 +19,7 @@ const snowItems = Array.from({ length: 54 }, (_, index) => ({
   sway: `${index % 2 === 0 ? 42 : -38}px`,
 }));
 
-export default function AnimatedPageHero({ eyebrow, title, text, image, portrait, variant = "default", snow = false }) {
+export default function AnimatedPageHero({ eyebrow, title, text, image, portrait, variant = "default", snow = false, showActive = true }) {
   return (
     <section className={`animated-page-hero animated-page-hero--${variant}`}>
       <img src={image} alt={`${eyebrow} banner`} />
@@ -73,7 +72,7 @@ export default function AnimatedPageHero({ eyebrow, title, text, image, portrait
         <p>{eyebrow}</p>
         <h1>{title}</h1>
         {text ? <span>{text}</span> : null}
-        <div className="breadcrumb animated-page-hero-breadcrumb"><AppLink to="/">Home</AppLink><ChevronRight size={16} />{eyebrow}</div>
+        {showActive ? <ActiveButton className="active-btn--hero" /> : null}
       </div>
     </section>
   );

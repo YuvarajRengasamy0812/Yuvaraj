@@ -1,23 +1,23 @@
-import { ArrowUpRight, BrainCircuit, Code2, CreditCard, Database, LineChart, ServerCog, ShieldCheck, Sparkles, TerminalSquare, Zap } from "lucide-react";
+import { BarChart, Code2, CreditCard, Database, Layers, Lightbulb, LineChart, Palette, Route, Server, Terminal, Zap } from "./Icons";
 import { skills } from "../data/portfolio";
 
 const iconMap = {
   "React JS": Code2,
-  "Next.js": TerminalSquare,
+  "Next.js": Terminal,
   JavaScript: Zap,
-  "Tailwind CSS": Sparkles,
-  "Bootstrap 5": Sparkles,
-  "Material UI": Sparkles,
+  "Tailwind CSS": Palette,
+  "Bootstrap 5": Layers,
+  "Material UI": Layers,
   PHP: Code2,
-  Laravel: ServerCog,
-  "REST API": ArrowUpRight,
+  Laravel: Server,
+  "REST API": Route,
   MySQL: Database,
   PostgreSQL: Database,
   MongoDB: Database,
   "MT5 API": LineChart,
   Payments: CreditCard,
-  "AI Tools": BrainCircuit,
-  "Power BI": ShieldCheck,
+  "AI Tools": Lightbulb,
+  "Power BI": BarChart,
 };
 
 export default function SkillGrid({ compact = false }) {

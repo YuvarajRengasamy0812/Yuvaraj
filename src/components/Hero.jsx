@@ -1,4 +1,4 @@
-import { ArrowDownCircle, BriefcaseBusiness, Code2, Download, Mail, Send } from "lucide-react";
+import { DoorEnter, DownloadSave, Github, Linkedin, Mail, XLogo } from "./Icons";
 import { images, profile, roles } from "../data/portfolio";
 import { useTypewriter } from "../hooks/useTypewriter";
 import AppLink from "./AppLink";
@@ -6,9 +6,9 @@ import HeroParticles from "./HeroParticles";
 import TiltImage from "./TiltImage";
 
 const socials = [
-  { label: "LinkedIn", href: profile.linkedin, icon: BriefcaseBusiness },
-  { label: "GitHub", href: profile.github, icon: Code2 },
-  { label: "X", href: profile.twitter, icon: Send },
+  { label: "LinkedIn", href: profile.linkedin, icon: Linkedin },
+  { label: "GitHub", href: profile.github, icon: Github },
+  { label: "X", href: profile.twitter, icon: XLogo },
   { label: "Mail", href: `mailto:${profile.email}`, icon: Mail },
 ];
 
@@ -23,8 +23,8 @@ export default function Hero() {
           <h1>Hi There,<br />I am Yuvaraj <span>R</span></h1>
           <p>i am into <strong>{typedRole}</strong><b className="type-caret">|</b></p>
           <div className="hero-actions">
-            <AppLink to="/about" className="old-btn">About Me <ArrowDownCircle size={18} /></AppLink>
-            <a href={profile.resume} target="_blank" rel="noreferrer" className="ghost-btn">Resume <Download size={17} /></a>
+            <AppLink to="/about" className="old-btn">About Me <DoorEnter /></AppLink>
+            <a href={profile.resume} download="Yuvaraj-Rengasamy-Resume.pdf" className="ghost-btn">Resume <DownloadSave /></a>
           </div>
           <div className="social-row">
             {socials.map((social) => {

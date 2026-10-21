@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, ExternalLink } from "lucide-react";
+import { BriefcaseBusiness, ExternalLink } from "./Icons";
 import { experience } from "../data/portfolio";
 
 export default function ExperienceTimeline() {

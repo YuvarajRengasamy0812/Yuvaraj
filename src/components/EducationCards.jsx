@@ -1,4 +1,4 @@
-import { CalendarDays, Eye, GraduationCap, MapPin } from "lucide-react";
+import { CalendarDays, DoorEnter, GraduationCap, MapPin } from "./Icons";
 import AppLink from "./AppLink";
 import { education } from "../data/portfolio";
 
@@ -21,7 +21,7 @@ export default function EducationCards() {
             <b>{item.articleTitle}</b>
             <div className="education-action-center">
               <AppLink to={`/education/${item.slug}`} className="education-read-link">
-                <Eye size={18} /> View Story
+                View Story <DoorEnter size={19} />
               </AppLink>
             </div>
           </div>

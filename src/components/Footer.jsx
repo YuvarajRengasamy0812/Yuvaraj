@@ -1,11 +1,11 @@
-import { BriefcaseBusiness, Code2, Mail, MapPin, Phone, Send } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Phone, XLogo } from "./Icons";
 import { navItems, profile } from "../data/portfolio";
 import AppLink from "./AppLink";
 
 const socials = [
-  { label: "LinkedIn", href: profile.linkedin, icon: BriefcaseBusiness },
-  { label: "GitHub", href: profile.github, icon: Code2 },
-  { label: "X", href: profile.twitter, icon: Send },
+  { label: "LinkedIn", href: profile.linkedin, icon: Linkedin },
+  { label: "GitHub", href: profile.github, icon: Github },
+  { label: "X", href: profile.twitter, icon: XLogo },
   { label: "Email", href: `mailto:${profile.email}`, icon: Mail },
 ];
 
@@ -21,7 +21,7 @@ export default function Footer({ currentPath }) {
       <div className="footer-grid">
         <div className="footer-brand">
           <h2>Yuvaraj Portfolio</h2>
-          <p>Thank you for visiting my personal portfolio website. Keep rising with clean code, strong UI and useful products.</p>
+          <p>Thanks for stopping by. If you have a project in mind, a question, or just want to talk about code, my inbox is always open.</p>
           <div className="footer-socials">
             {socials.map((social) => {
               const Icon = social.icon;
@@ -59,7 +59,8 @@ export default function Footer({ currentPath }) {
           </ul>
         </div>
       </div>
-      <p className="footer-credit">Designed and rebuilt with React + Tailwind CSS by Yuvaraj R. (c) {new Date().getFullYear()}</p>
+      <p className="footer-credit">© {new Date().getFullYear()} Yuvaraj R. Designed and coded by me.</p>
+      <p className="footer-privacy">This site keeps an anonymous visit log (page, source, country, browser). No IP addresses are stored. <AppLink to="/visitors" currentPath={currentPath}>See it live</AppLink></p>
     </footer>
   );
 }
